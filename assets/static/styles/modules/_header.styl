@@ -1,0 +1,35 @@
+.header
+    background-color primaryBlack
+.header__inner
+    display flex
+    padding 50px 0 25px 0
+.header__nav
+    flex 2
+    li
+        position: relative
+        display inline-block
+        &:not(:last-child)
+            margin-right 42px
+        &:hover
+            &::after
+                position absolute
+                bottom -41px    
+                display block
+                width 100%
+                height 31px
+                background-color primaryCyan
+                content ''
+    a
+        display inline-block
+        font: 34px / 1 titleFont
+        text-transform uppercase
+        color #fff
+.header__other
+    li
+        display inline-block
+        &:not(:last-child)
+            margin-right 38px
+    a
+        color primaryLightGrey
+        &:hover
+            color primaryCyan
