@@ -83,10 +83,10 @@ gulp.task('css:build', () => {
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
         }))
+        .pipe(sourcemaps.write())
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.stylus.dest))
 });
 
