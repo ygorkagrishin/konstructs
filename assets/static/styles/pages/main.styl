@@ -2,14 +2,14 @@
     display flex
 .news
     position relative
-    flex 2
+    max-width 59%
 .aside
     position relative
-    flex 1
+    max-width 41%
 .news__name
     display: inline-block
-    padding 10px 14px
-    font 24px / 1 titleFont
+    padding 4px 14px
+    font 27px / 1 titleFont
     text-transform uppercase
     color #fff
     background-color primaryCyan
@@ -17,19 +17,21 @@
     font 22px / 1 titleFont
     color primaryCyan
 .post__top
-    padding 45px 40px 34px 40px 
+    padding 40px 40px 15px 40px 
 .post__title
-    margin: 24px 0 34px 0
-    font: 40px / 1 titleFont 
+    margin: 13px 0
+    font: 46px / 40px titleFont 
     color primaryBlack
 .post__pic
     height 255px
     overflow hidden
+    img 
+        width 100%
 .post__cont
     textColor = #798184
 
-    padding 26px 40px 55px 40px
+    padding 20px 40px 50px 40px
     color textColor
     p
         &:not(:last-child)
-            margin-bottom 38px
+            margin-bottom 24px
