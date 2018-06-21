@@ -6,21 +6,21 @@ block title
 block content 
     main.page__main
 
-        // Header
+        //- Header
         include ../modules/_header
-        // Header end
+        //- Header end
 
-        // Nav 
+        //- Nav 
         include ../modules/_nav
-        // Nav end
+        //- Nav end
 
         .container
             .wrap
-                // Content
+                //- Content
                 section.news
                     h2.news__name in recent news
 
-                    // Post Software
+                    //- Post Software
                     article.news__post.post
                         .post__top
                             span.post__name Software
@@ -41,9 +41,9 @@ block content
                                 | for the Behance team as a way to stay organized. 
                                 | In 2007, at the insistence of friends who 
                                 | wanted Action Pads of their own...
-                    // Post Software end
+                    //- Post Software end
 
-                    // Post Printers
+                    //- Post Printers
                     article.posts__post.post
                         .post__top
                             span.post__name Printers
@@ -61,22 +61,65 @@ block content
                                 | giving away files for printable case for it’s new Lumia 820 range. 
                                 | This week Nokia announced it is giving away 
                                 | files for printable case for it’s new Lumia 820 range. 
-                    // Post Printers end
-                aside.aside
+                    //- Post Printers end
+                
+                //- Sidebar
+                aside.popular
+                    h2.popular__name Popular
+                    article.popular__post
+                        a(href="javavscript:void(0);").popular__link
+                            h3.popular__title
+                                | DeltaMaker – The new kid on the block 
+                                | An Elegant 3D Printer
+                            p.popular__desc 
+                                | A new cheap ass 3D Printer worth checking out
+                            p.popular__date 
+                                | 2 Days Ago
+                    article.popular__post
+                        a(href="javavscript:void(0);").popular__link
+                            h3.popular__title
+                                | Software Review: 
+                                | Autodesk Inventor Fusion for Mac
+                            p.popular__desc 
+                                | 3D Printing, 3D Software
+                            p.popular__date 
+                                | 3 Days Ago
+                    article.popular__post
+                        a(href="javavscript:void(0);").popular__link
+                            h3.popular__title
+                                | DeltaMaker – The new kid on the 
+                                | block An Elegant 3D Printer
+                            p.popular__desc 
+                                | A new cheap ass 3D Printer worth checking out
+                            p.popular__date 
+                                | 3 Days Ago
+                    article.popular__post
+                        a(href="javavscript:void(0);").popular__link
+                            h3.popular__title
+                                | Software Review: 
+                                | Autodesk Inventor Fusion for Mac
+                            p.popular__desc 
+                                | 3D Printing, 3D Software
+                            p.popular__date 
+                                | 3 Days Ago
+                //- Sidebar end    
 
-            // Feature section
+            //- Feature section
             section.feat
-                span.feat__name
-                    | Featured news
-                h3.feat__title
-                    | Nokia offiring customers printable STL phone cases 
-                    | for the Lumia 820 and things
-            // Feature section end
+                .feat__top
+                    span.feat__name
+                        | Featured news
+                    h3.feat__title
+                        | Nokia offiring customers printable STL phone cases 
+                        | for the Lumia 820
+            //- Feature section end
 
             .wrap
                 section.news
+                    .ghost__heading
+                        h2 in recent news
 
-                    // Post Software
+                    //- Post Software
                     article.news__post.post
                         .post__top
                             span.post__name Software
@@ -97,10 +140,48 @@ block content
                                 | for the Behance team as a way to stay organized. 
                                 | In 2007, at the insistence of friends who 
                                 | wanted Action Pads of their own...
-                    // Post Software end
-                aside.aside
-                // Content end
-        // Footer
+                    //- Post Software end
+
+                aside.popuplar
+                    article.popular__post
+                        a(href="javavscript:void(0);").popular__link
+                            h3.popular__title
+                                | DeltaMaker – The new kid on the block 
+                                | An Elegant 3D Printer
+                            p.popular__desc 
+                                | A new cheap ass 3D Printer worth checking out
+                            p.popular__date 
+                                | 2 Days Ago
+                    article.popular__post
+                        a(href="javavscript:void(0);").popular__link
+                            h3.popular__title
+                                | Software Review: 
+                                | Autodesk Inventor Fusion for Mac
+                            p.popular__desc 
+                                | A new cheap ass 3D Printer worth checking out
+                            p.popular__date 
+                                | 3 Days Ago
+                    article.popular__post
+                        a(href="javavscript:void(0);").popular__link
+                            h3.popular__title
+                                | DeltaMaker – The new kid on the 
+                                | block An Elegant 3D Printer
+                            p.popular__desc 
+                                | A new cheap ass 3D Printer worth checking out
+                            p.popular__date 
+                                | 3 Days Ago
+                    article.popular__post
+                        a(href="javavscript:void(0);").popular__link
+                            h3.popular__title
+                                | Software Review: 
+                                | Autodesk Inventor Fusion for Mac
+                            p.popular__desc 
+                                | A new cheap ass 3D Printer worth checking out
+                            p.popular__date 
+                                | 3 Days Ago
+
+                //- Content end
+        //- Footer
         include ../modules/_footer
-        // Footer end
+        //- Footer end
 

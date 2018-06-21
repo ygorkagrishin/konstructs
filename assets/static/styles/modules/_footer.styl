@@ -1,11 +1,11 @@
 .footer
     margin-top 19px
     background-color primaryBlack
-.footer__inner
+.footer__row
     display: flex
     justify-content space-between
     padding 86px 60px 142px 60px
-.footer__list
+.footer__col
     footerColorText = #737c85
     
     flex 1
@@ -13,6 +13,9 @@
         margin-bottom 21px
         font 14px / 1 footerTitleFont
         color footerColorText
+.footer__list
+    footerColorText = #737c85
+
     li
         &:not(:last-child)
             margin-bottom 11px

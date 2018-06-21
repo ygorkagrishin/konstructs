@@ -1,11 +1,15 @@
 .wrap
     display flex
+    border-right 1px solid borderColor
+    border-left 1px solid borderColor
+    border-top 1px solid borderColor
 .news
     position relative
-    max-width 59%
-.aside
+    max-width 60.8%
+    border-right 1px solid borderColor
+.sidebar
     position relative
-    max-width 41%
+    max-width 39.2%
 .news__name
     display: inline-block
     padding 4px 14px
@@ -13,6 +17,9 @@
     text-transform uppercase
     color #fff
     background-color primaryCyan
+.post
+    &:not(:first-of-type)
+        border-top 1px solid borderColor
 .post__name
     font 22px / 1 titleFont
     color primaryCyan
@@ -35,3 +42,57 @@
     p
         &:not(:last-child)
             margin-bottom 24px
+.feat
+    min-height 616px
+    background primaryGrey url('images/content/feature/Using-the-Form-1.png') no-repeat center / cover
+.feat__name 
+    display inline-block
+    padding 4px 14px
+    font 27px / 1 titleFont
+    text-transform uppercase
+    color #fff 
+    background-color primaryBlack
+.feat__top
+    padding 68px 60px
+.feat__title
+    max-width: 660px
+    padding 18px 0
+    font 70px/64px tungstennarrow-medium,sans-serif,arial
+    letter-spacing 3px
+    color #fff
+.ghost__heading
+    gostHeading()
+.popular__name
+    @extend .news__name
+.popular__post
+    position relative
+    text-align center
+    border-bottom 1px solid borderColor
+    &::after
+        position absolute
+        left 40%
+        bottom 0
+        width 100px
+        height 3px
+        background-color borderColor
+        content ""
+.popular__link
+    display block
+    padding 38px 38px 16px 16px
+    cursor pointer
+    &:hover
+        background-color primaryGrey
+.popular__title
+    margin-bottom 8px
+    font: 35px / 1 titleFont
+    letter-spacing 1px
+.popular__desc
+    colorFontText = #798184
+
+    margin-bottom 18px
+    font 19px / 1 baseSecondFont
+    color colorFontText
+.popular__date
+    colorFontDate = #cdcdcd
+    
+    color colorFontDate
