@@ -66,7 +66,9 @@ gulp.task('html:build', () => {
         .pipe(plumber({
             errorHandler: notify.onError()
         }))
-        .pipe(pug())
+        .pipe(pug({
+            pretty: true
+        }))
         .pipe(gulp.dest(paths.pug.dest))
 });
 
@@ -95,13 +97,13 @@ gulp.task('js:build', () => {
         .pipe(plumber({
             errorHandler: notify.onError()
         }))
-        .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['env']
         }))
+        .pipe(sourcemaps.init())
         .pipe(uglify())
-        .pipe(concat('common.min.js'))
         .pipe(sourcemaps.write())
+        .pipe(concat('common.min.js'))
         .pipe(gulp.dest(paths.js.dest))
 });
 
