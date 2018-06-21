@@ -5,11 +5,12 @@
     border-top 1px solid borderColor
 .news
     position relative
-    max-width 60.8%
+    max-width 61%
+    padding-right 18px
     border-right 1px solid borderColor
 .sidebar
     position relative
-    max-width 39.2%
+    max-width 39%
 .news__name
     display: inline-block
     padding 4px 14px
@@ -60,12 +61,16 @@
     font 70px/64px tungstennarrow-medium,sans-serif,arial
     letter-spacing 3px
     color #fff
-.ghost__heading
-    gostHeading()
 .popular__name
     @extend .news__name
+.ghost__heading
+    gostHeading()
+.popular
+    &__name + &__post
+        padding 19px 34px 28px 16px
 .popular__post
     position relative
+    padding 37px 34px 16px 16px
     text-align center
     border-bottom 1px solid borderColor
     &::after
@@ -76,21 +81,20 @@
         height 3px
         background-color borderColor
         content ""
-.popular__link
-    display block
-    padding 38px 38px 16px 16px
-    cursor pointer
     &:hover
         background-color primaryGrey
 .popular__title
-    margin-bottom 8px
-    font: 35px / 1 titleFont
-    letter-spacing 1px
+    margin-bottom 9px
+    & > a
+        font: 35px / 1 titleFont
+        letter-spacing 1px
+        &:hover
+            text-decoration underline
 .popular__desc
     colorFontText = #798184
 
     margin-bottom 18px
-    font 19px / 1 baseSecondFont
+    font 18px / 1 baseSecondFont
     color colorFontText
 .popular__date
     colorFontDate = #cdcdcd
