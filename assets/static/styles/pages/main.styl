@@ -28,8 +28,7 @@
     padding 40px 40px 15px 40px 
 .post__title
     margin: 13px 0
-    font: 46px / 40px titleFont 
-    color primaryBlack
+    font: 46px / 40px titleFont
 .post__pic
     height 255px
     overflow hidden
@@ -66,6 +65,7 @@
 .ghost__heading
     gostHeading()
 .popular
+    margin-bottom 28px
     &__name + &__post
         padding 19px 34px 28px 16px
 .popular__post
@@ -100,3 +100,36 @@
     colorFontDate = #cdcdcd
     
     color colorFontDate
+.editors__name
+    @extend .popular__name
+    background-color primaryBlack
+.editors__row
+    display flex
+.editors__pic
+    width 160px 
+    height 132px
+    overflow hidden
+    img 
+        width 150%
+.editors__cont
+    padding 0 40px 0 20px
+    border-top 1px solid borderColor
+    h4 
+        position relative
+        margin 13px 0
+        a
+            font: 24px / 34px titleFont
+            letter-spacing 1px
+            &:hover
+                text-decoration underline
+        &::after
+            position absolute
+            bottom -7px 
+            z-index 999
+            display block
+            width 100px
+            height 2px
+            background-color borderColor
+            content ''
+.editors__date
+    @extend .popular__date
