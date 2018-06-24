@@ -2,40 +2,49 @@
     background-color primaryBlack
 .header__inner
     display flex
-    padding 40px 0 18px 0px
+    padding 2.5rem 0 1.125rem 0
+    @media screen and (orientation portrait) and (max-width 800px)
+        justify-content space-between
+.header__logo
+    @media screen and (orientation portrait) and (max-width 800px)
+        flex 1
 .header__nav
     flex 2
+    @media screen and (orientation portrait) and (max-width 800px)
+        flex 1
     ul
-        padding-top 3px
+        padding-top .1875rem
     li
         position: relative
         display inline-block
         &:not(:last-child)
-            margin-right 52px
+            margin-right 3.25rem
         &:hover
             &::after
                 position absolute
-                bottom -36px    
+                bottom -2.85rem    
                 display block
                 width 100%
-                height 32px
+                height 2rem
                 background-color primaryCyan
                 content ''
     a
         display inline-block
-        font: 38px / 1 titleFont
+        font: 2.375em / 1 titleFont
         text-transform uppercase
         color #fff
 .header__other
-    padding-right 8px
+    padding-right .5rem
+    @media screen and (orientation portrait) and (max-width 800px)
+        display none
     ul
-        padding-top 4px
+        padding-top .25rem
     li
         display inline-block
         &:not(:last-child)
-            margin-right 34px
+            margin-right 2.125rem
     a
-        font-size 14px
+        font-size .875em
         color primaryLightGrey
         &:hover
             color primaryCyan

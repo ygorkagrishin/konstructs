@@ -1,8 +1,11 @@
 .logo
     fontsColor = #3d3d3d
 
-    padding-right 8px
+    padding-right .11428571em
+    font-size 4.375em // 70 default
     text-transform uppercase
     a
-        font: 70px / 60px titleFont
+        font: 1em / .85714286em titleFont
         color fontsColor
+        @media screen and (orientation portrait) and (max-width 800px)
+            line-height 1

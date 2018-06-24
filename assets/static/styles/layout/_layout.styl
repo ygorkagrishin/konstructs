@@ -1,13 +1,18 @@
 *
     box-sizing border-box
 html 
-    font-size: 100%
+    @media screen and (max-width 1800px) 
+        font-size 1rem // 16
+    @media screen and (max-width 1024px)
+        font-size .875rem // 14
+    @media screen and (max-width 480px)
+        font-size: .8125rem // 13
 body 
     padding 0
-    font: 16px / 24px baseFont
+    font: 1rem / 1.5rem baseFont
 .container
     width 95%
-    max-width 1178px
+    max-width 73.625rem
     margin 0 auto
 for $n in (1...6)
     h{$n}

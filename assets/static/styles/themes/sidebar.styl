@@ -1,0 +1,89 @@
+.popular__name
+    @extend .news__name
+.ghost__heading
+    gostHeading()
+.popular
+    margin-bottom 1.75rem
+    &__name + &__post
+        padding 1.0625rem 2.125rem 1.75rem 1rem
+        @media screen and (orientation portraite) and (max-width 1024)
+            padding 1.0625rem 2.125rem 1.75rem 2.125rem
+.popular__post
+    position relative
+    padding 2.3125rem 2.125rem 1rem 1rem
+    text-align center
+    border-bottom .0625rem solid borderColor
+    @media screen and (orientation portrait) and (max-width 1024px)
+        padding 2.3125rem 2.125rem
+    &::after
+        position absolute
+        left 40%
+        bottom 0
+        width 6.25rem
+        height .1875rem
+        background-color borderColor
+        content ""
+    &:hover
+        background-color primaryGrey
+.popular__title
+    margin-bottom .22222222em 
+    font-size 2.25em // 36px default
+    @media screen and (orientation portrait) and (max-width 800px)
+        font-size 2em
+    & > a
+        font: 1em / 1 titleFont
+        letter-spacing .02777778em
+        &:hover
+            text-decoration underline
+.popular__desc
+    colorFontText = #798184
+
+    margin-bottom 1em
+    font 1.125em / 1 baseSecondFont
+    color colorFontText
+    @media screen and (orientation portrait) and (max-width 800px)
+        font-size 1em
+.popular__date
+    colorFontDate = #cdcdcd
+    
+    color colorFontDate
+.editors__name
+    @extend .popular__name
+    background-color primaryBlack
+.editors__row
+    display flex
+    @media screen and (orientation portrait) and (max-width 1024px)
+        padding-bottom 1rem
+    .editors__col_flex_2
+        flex 2
+.editors__pic
+    width 10rem 
+    height 8.25rem
+    overflow hidden
+    @media screen and (orientation portrait) and (max-width 1024px)
+        display none
+    img 
+        width 150%
+.editors__cont
+    padding 0 2.5rem 0 1.25rem
+    border-top .0625rem solid borderColor
+    h4 
+        position relative
+        margin 1em 0
+        font-size .8125em // 13px default
+        a
+            font: 1.84615385em / 1.41666667em titleFont
+            letter-spacing 1px
+            &:hover
+                text-decoration underline
+        &::after
+            position absolute
+            bottom -.53846154em 
+            z-index 999
+            display block
+            width 7.69230769em
+            height .15384615em
+            background-color borderColor
+            content ''
+.editors__date
+    @extend .popular__date

@@ -1,135 +1,93 @@
+
+
+//TODO: Пробывать замутить, 
+// что то вроде принцыпу постепенного ухудшения 
+
+
+//TODO: @support ?
+
+//TODO: Закомитить изменения. Переведины px в em и rem. Сделан адаптив для tablet
+
+
 .wrap
     display flex
-    border-right 1px solid borderColor
-    border-left 1px solid borderColor
-    border-top 1px solid borderColor
+    border-right .0625rem solid borderColor
+    border-left .0625rem solid borderColor
+    border-top .0625rem solid borderColor
 .news
     position relative
     max-width 61%
-    padding-right 18px
-    border-right 1px solid borderColor
+    padding-right 1.125rem
+    border-right .0625rem solid borderColor
+    @media screen and (orientation portrait) and (max-width 800px)
+        padding-right 0
 .sidebar
     position relative
     max-width 39%
 .news__name
     display: inline-block
-    padding 4px 14px
-    font 27px / 1 titleFont
+    padding .14814815em .5185185252em
+    font 1.6875em / 1 titleFont
     text-transform uppercase
     color #fff
     background-color primaryCyan
 .post
     &:not(:first-of-type)
-        border-top 1px solid borderColor
+        border-top .0625rem solid borderColor
 .post__name
-    font 22px / 1 titleFont
+    font 1.375em / 1 titleFont
     color primaryCyan
 .post__top
-    padding 40px 40px 15px 40px 
+    padding 2.5rem 2.5rem .9375rem 2.5rem
+    @media screen and (orientation portrait) and (max-width 1024px)
+        padding 2.5rem 1rem .9375rem 1rem
 .post__title
-    margin: 13px 0
-    font: 46px / 40px titleFont
+    margin: .28260870em 0
+    font-size 2.875em
+    a    
+        font: 1em / .86956522em titleFont
+        &:hover
+            text-decoration underline
 .post__pic
-    height 255px
+    height 15.9375rem
     overflow hidden
     img 
         width 100%
 .post__cont
     textColor = #798184
 
-    padding 20px 40px 50px 40px
+    /* 
+        Да это не ошибка, используем em так как возможно будем менять размер шрифта в блоке
+     */
+    padding 1.25em 2.5em 3.125em 2.5em
     color textColor
+    @media screen and (orientation portrait) and (max-width 1024px)
+        padding 1em 1em 2.5em 1em
     p
         &:not(:last-child)
-            margin-bottom 24px
+            margin-bottom 1.5em
+            @media screen and (orientation portrait) and (max-width 1024px)
+                margin-bottom 1em
+
 .feat
-    min-height 616px
+    min-height 38.5rem
     background primaryGrey url('images/content/feature/Using-the-Form-1.png') no-repeat center / cover
 .feat__name 
     display inline-block
-    padding 4px 14px
-    font 27px / 1 titleFont
+    padding .14814815em .5185185252em
+    font 1.6875em / 1 titleFont
     text-transform uppercase
     color #fff 
     background-color primaryBlack
 .feat__top
-    padding 68px 60px
+    padding 4.25rem 3.75rem
 .feat__title
-    max-width: 660px
-    padding 18px 0
-    font 70px/64px tungstennarrow-medium,sans-serif,arial
-    letter-spacing 3px
-    color #fff
-.popular__name
-    @extend .news__name
-.ghost__heading
-    gostHeading()
-.popular
-    margin-bottom 28px
-    &__name + &__post
-        padding 19px 34px 28px 16px
-.popular__post
-    position relative
-    padding 37px 34px 16px 16px
-    text-align center
-    border-bottom 1px solid borderColor
-    &::after
-        position absolute
-        left 40%
-        bottom 0
-        width 100px
-        height 3px
-        background-color borderColor
-        content ""
-    &:hover
-        background-color primaryGrey
-.popular__title
-    margin-bottom 9px
-    & > a
-        font: 35px / 1 titleFont
-        letter-spacing 1px
+    max-width: 9.42857143em
+    padding .25714286em 0
+    font-size 4.375em // 70px
+    a
+        font 1em / .91428571em tungstennarrow-medium,sans-serif,arial
+        letter-spacing .04285714em
+        color #fff
         &:hover
             text-decoration underline
-.popular__desc
-    colorFontText = #798184
-
-    margin-bottom 18px
-    font 18px / 1 baseSecondFont
-    color colorFontText
-.popular__date
-    colorFontDate = #cdcdcd
-    
-    color colorFontDate
-.editors__name
-    @extend .popular__name
-    background-color primaryBlack
-.editors__row
-    display flex
-.editors__pic
-    width 160px 
-    height 132px
-    overflow hidden
-    img 
-        width 150%
-.editors__cont
-    padding 0 40px 0 20px
-    border-top 1px solid borderColor
-    h4 
-        position relative
-        margin 13px 0
-        a
-            font: 24px / 34px titleFont
-            letter-spacing 1px
-            &:hover
-                text-decoration underline
-        &::after
-            position absolute
-            bottom -7px 
-            z-index 999
-            display block
-            width 100px
-            height 2px
-            background-color borderColor
-            content ''
-.editors__date
-    @extend .popular__date

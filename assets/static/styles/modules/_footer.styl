@@ -3,23 +3,25 @@
 .footer__row
     display: flex
     justify-content space-between
-    padding 86px 60px 142px 60px
+    padding 5.375rem 3.75rem 8.875rem 3.75rem
+    @media screen and (orientation portrait) and (max-width 1024px)
+        padding: 1.7rem 1rem 7rem 1rem
 .footer__col
     footerColorText = #737c85
     
     flex 1
     h6
-        margin-bottom 21px
-        font 14px / 1 footerTitleFont
+        margin-bottom 1.5em
+        font .875em / 1 footerTitleFont // 14px default
         color footerColorText
 .footer__list
     footerColorText = #737c85
 
     li
         &:not(:last-child)
-            margin-bottom 11px
+            margin-bottom .6875rem
     a
-        font: 14px / 1 footerLinkFont
+        font: .875em / 1 footerLinkFont // 14px default
         color footerColorText
         &:hover
             color #fff
