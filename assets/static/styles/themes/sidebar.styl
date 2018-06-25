@@ -1,3 +1,9 @@
+.sidebar
+    position relative
+    max-width 39%
+    @media screen and (orientation portrait) and (max-width 480px)
+        max-width 100%
+        border-top .0625rem solid borderColor
 .popular__name
     @extend .news__name
 .ghost__heading
@@ -6,8 +12,10 @@
     margin-bottom 1.75rem
     &__name + &__post
         padding 1.0625rem 2.125rem 1.75rem 1rem
-        @media screen and (orientation portraite) and (max-width 1024)
+        @media screen and (orientation portrait) and (max-width 1024px)
             padding 1.0625rem 2.125rem 1.75rem 2.125rem
+        @media screen and (orientation portrait) and (max-width 580px)
+            padding 2rem 1rem
 .popular__post
     position relative
     padding 2.3125rem 2.125rem 1rem 1rem
@@ -15,6 +23,8 @@
     border-bottom .0625rem solid borderColor
     @media screen and (orientation portrait) and (max-width 1024px)
         padding 2.3125rem 2.125rem
+    @media screen and (orientation portrait) and (max-width 800px) 
+        padding 2rem 1rem
     &::after
         position absolute
         left 40%
@@ -30,6 +40,10 @@
     font-size 2.25em // 36px default
     @media screen and (orientation portrait) and (max-width 800px)
         font-size 2em
+    @media screen and (orientation portrait) and (max-width 580px)
+        font-size 1.5em
+    @media screen and (orientation portrait) and (max-width 480px)
+        font-size 2em
     & > a
         font: 1em / 1 titleFont
         letter-spacing .02777778em
@@ -42,6 +56,10 @@
     font 1.125em / 1 baseSecondFont
     color colorFontText
     @media screen and (orientation portrait) and (max-width 800px)
+        font-size 1em
+    @media screen and (orientation portrait) and (max-width 580px)
+        font-size .8em
+    @media screen and (orientation portrait) and (max-width 480px)
         font-size 1em
 .popular__date
     colorFontDate = #cdcdcd
@@ -67,10 +85,14 @@
 .editors__cont
     padding 0 2.5rem 0 1.25rem
     border-top .0625rem solid borderColor
+    @media screen and (orientation portrait) and (max-width 580px)
+        padding 0 1em
     h4 
         position relative
         margin 1em 0
         font-size .8125em // 13px default
+        @media screen and (orientation portrait) and (max-width 480px)
+            font-size 1em
         a
             font: 1.84615385em / 1.41666667em titleFont
             letter-spacing 1px

@@ -6,14 +6,12 @@
 
 //TODO: @support ?
 
-//TODO: Закомитить изменения. Переведины px в em и rem. Сделан адаптив для tablet
-
-
 .wrap
     display flex
     border-right .0625rem solid borderColor
     border-left .0625rem solid borderColor
-    border-top .0625rem solid borderColor
+    @media screen and (orientation portrait) and (max-width 480px)
+        flex-direction column
 .news
     position relative
     max-width 61%
@@ -21,9 +19,9 @@
     border-right .0625rem solid borderColor
     @media screen and (orientation portrait) and (max-width 800px)
         padding-right 0
-.sidebar
-    position relative
-    max-width 39%
+    @media screen and (orientation portrait) and (max-width 480px)
+        max-width 100%
+        border-right none
 .news__name
     display: inline-block
     padding .14814815em .5185185252em
@@ -44,6 +42,9 @@
 .post__title
     margin: .28260870em 0
     font-size 2.875em
+    @media screen and (orientation portrait) and (max-width 580px)
+        margin .2em 0
+        font-size 2.5em
     a    
         font: 1em / .86956522em titleFont
         &:hover
@@ -51,6 +52,10 @@
 .post__pic
     height 15.9375rem
     overflow hidden
+    @media screen and (orientation portrait) and (max-width 580px)
+        height 12rem
+    @media screen and (orientation portrait) and (max-width 480px)
+        height 17rem
     img 
         width 100%
 .post__cont
@@ -63,6 +68,8 @@
     color textColor
     @media screen and (orientation portrait) and (max-width 1024px)
         padding 1em 1em 2.5em 1em
+    @media screen and (orientation portrait) and (max-width 580px)
+        padding 1em .5em 3em .5em
     p
         &:not(:last-child)
             margin-bottom 1.5em
@@ -72,6 +79,10 @@
 .feat
     min-height 38.5rem
     background primaryGrey url('images/content/feature/Using-the-Form-1.png') no-repeat center / cover
+    @media screen and (orientation portrait) and (max-width 580px)
+        min-height 25rem
+    @media screen and (orientation portrait) and (max-width 480px)
+        min-height 33rem
 .feat__name 
     display inline-block
     padding .14814815em .5185185252em
@@ -81,10 +92,16 @@
     background-color primaryBlack
 .feat__top
     padding 4.25rem 3.75rem
+    @media screen and (orientation portrait) and (max-width 580px)
+        padding 1em
 .feat__title
     max-width: 9.42857143em
     padding .25714286em 0
     font-size 4.375em // 70px
+    @media screen and (orientation portrait) and (max-width 580px)
+        font-size 3.5em
+    @media screen and (orientation portrait) and (max-width 375px)
+        font-size 2.5em
     a
         font 1em / .91428571em tungstennarrow-medium,sans-serif,arial
         letter-spacing .04285714em

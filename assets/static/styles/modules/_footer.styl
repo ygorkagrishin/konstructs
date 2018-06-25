@@ -6,17 +6,29 @@
     padding 5.375rem 3.75rem 8.875rem 3.75rem
     @media screen and (orientation portrait) and (max-width 1024px)
         padding: 1.7rem 1rem 7rem 1rem
-.footer__col
+    @media screen and (orientation portrait) and (max-width 580px)
+        flex-wrap wrap
+    @media screen and (orientation portrait) and (max-width 420px)
+        padding 1.7rem 0 7rem 0
+    & > .footer__col:last-child
+        @media screen and (orientation portrait) and (max-width 580px)
+            width 100%
+            padding-top 1.5rem
+.footer__col 
     footerColorText = #737c85
     
-    flex 1
+    @media screen and (orientation portrait) and (max-width 580px)
+        width 50%
+    @media screen and (orientation portrait) and (max-width 345px)
+        width 100%
+        text-align center    
     h6
         margin-bottom 1.5em
         font .875em / 1 footerTitleFont // 14px default
         color footerColorText
 .footer__list
     footerColorText = #737c85
-
+    
     li
         &:not(:last-child)
             margin-bottom .6875rem

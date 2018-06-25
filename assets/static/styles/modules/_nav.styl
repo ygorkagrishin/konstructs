@@ -3,6 +3,11 @@
         display flex
         padding 1.1875rem 1.875rem 
         background-color primaryLightGrey
+        /* 
+            Отключим элемент позже разберемся, что следать
+        */
+        @media screen and (orientation portrait) and (max-width 580px)
+            display none 
     li
         &:not(:last-child)
             margin-right 2.25rem
