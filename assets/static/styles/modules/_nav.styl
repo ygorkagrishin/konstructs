@@ -6,8 +6,10 @@
         /* 
             Отключим элемент позже разберемся, что следать
         */
-        @media screen and (orientation portrait) and (max-width 580px)
+        @media (orientation portrait) and (max-width 580px)
             display none 
+        @media (orientation landscape) and (max-width 580px)
+            display none
     li
         &:not(:last-child)
             margin-right 2.25rem

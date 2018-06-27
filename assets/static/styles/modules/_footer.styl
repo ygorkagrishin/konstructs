@@ -4,23 +4,40 @@
     display: flex
     justify-content space-between
     padding 5.375rem 3.75rem 8.875rem 3.75rem
-    @media screen and (orientation portrait) and (max-width 1024px)
+    @media (orientation portrait) and (max-width 1024px)
         padding: 1.7rem 1rem 7rem 1rem
-    @media screen and (orientation portrait) and (max-width 580px)
+    @media (orientation landscape) and (max-width 800px)
+        padding: 1.7rem 1rem 7rem 1rem
+    @media (orientation landscape) and (max-width 680px)
         flex-wrap wrap
-    @media screen and (orientation portrait) and (max-width 420px)
+    @media (orientation portrait) and (max-width 580px)
+        flex-wrap wrap
+    @media (orientation portrait) and (max-width 420px)
         padding 1.7rem 0 7rem 0
+    @media (orientation landscape) and (max-width 480px)
+        flex-direction column
+    @media (orientation portrait) and (max-width 345px)
+        flex-direction: column
     & > .footer__col:last-child
-        @media screen and (orientation portrait) and (max-width 580px)
-            width 100%
+        @media (orientation landscape) and (max-width 680px)
+            flex 1 0 100%
+            padding-top: 1.5rem
+        @media (orientation portrait) and (max-width 580px)
+            flex 1 0 100%
             padding-top 1.5rem
 .footer__col 
     footerColorText = #737c85
     
-    @media screen and (orientation portrait) and (max-width 580px)
-        width 50%
-    @media screen and (orientation portrait) and (max-width 345px)
-        width 100%
+    flex 1
+    @media (orientation landscape) and (max-width 680px)
+        flex 1 0 50%
+    @media (orientation portrait) and (max-width 580px)
+        flex 1 0 50%
+    @media (orientation landscape) and (max-width 480px)
+        flex 1 0 100%
+        text-align center
+    @media (orientation portrait) and (max-width 345px)
+        flex 1 0 100%
         text-align center    
     h6
         margin-bottom 1.5em
