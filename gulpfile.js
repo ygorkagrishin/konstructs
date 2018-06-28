@@ -50,7 +50,6 @@ const paths = {
     libs: {
         normalize: 'node_modules/normalize.css/normalize.css',
         jquery: 'node_modules/jquery/dist/jquery.min.js',
-        fontAwesome: 'node_modules/@fortawesome/fontawesome-free/css/fontawesome.css',
         src: 'assets/static/libs/**/**/*',
         dest: 'public/libs/',
         watch: 'assets/static/libs/**/**/*'
@@ -129,8 +128,7 @@ gulp.task('libs:build', () => {
     return gulp.src([
         paths.libs.src,
         paths.libs.normalize,
-        paths.libs.jquery,
-        paths.libs.fontAwesome
+        paths.libs.jquery
     ])
     .pipe(newer(paths.libs.dest))
     .pipe(gulp.dest(paths.libs.dest))
