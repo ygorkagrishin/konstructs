@@ -8,18 +8,23 @@
         &:not(:last-child)
             margin-bottom .33rem
 .btn__menu_type_close
+    colorLink = #798184
+
     buttonReset()
     position absolute
     top 2rem
     right 1.5rem
     z-index 9999999
-    span 
-        display block
-        width 1.3rem
-        height .3rem
-        background-color primaryBlack
-        border-radius 5px
-        &:first-child
-            transform rotate(-45deg)
-        &:last-child
-            transform rotate(45deg) translate(-3px,-3px);
+    color colorLink
+    &:hover
+        color primaryBlack
+    // span 
+    //     display block
+    //     width 1.3rem
+    //     height .3rem
+    //     background-color primaryBlack
+    //     border-radius 5px
+    //     &:first-child
+    //         transform rotate(-45deg)
+    //     &:last-child
+    //         transform rotate(45deg) translate(-3px,-3px);
