@@ -6,16 +6,39 @@
         /* 
             Отключим элемент позже разберемся, что следать
         */
-        @media (orientation portrait) and (max-width 580px)
-            display none 
-        @media (orientation landscape) and (max-width 580px)
-            display none
+        @media (max-width 580px)
+            position absolute
+            top 0
+            left 0
+            display flex
+            z-index 999999
+            flex-direction column
+            justify-content center
+            align-items center
+            width 100%
+            height 100%
+            background-color primaryLightGrey
     li
         &:not(:last-child)
             margin-right 2.25rem
+            @media (max-width 580px)
+                margin-right 0
+                margin-bottom 1.5rem
     a
         colorLink = #798184
         
         color colorLink
         &:hover
             color primaryBlack
+    .btn__menu--close
+        buttonReset()
+        display none
+        @media (max-width 580px)
+            display block
+    @media (max-width 580px)
+        display none
+        &.active
+            display block
+.js-menu-active
+    @media (max-width 580px)
+        overflow hidden

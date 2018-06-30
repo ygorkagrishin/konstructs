@@ -1,0 +1,25 @@
+.btn__menu_type_open
+    buttonReset()
+    span 
+        display block
+        width 2rem
+        height .33rem 
+        background-color #fff
+        &:not(:last-child)
+            margin-bottom .33rem
+.btn__menu_type_close
+    buttonReset()
+    position absolute
+    top 2rem
+    right 1.5rem
+    z-index 9999999
+    span 
+        display block
+        width 1.3rem
+        height .3rem
+        background-color primaryBlack
+        border-radius 5px
+        &:first-child
+            transform rotate(-45deg)
+        &:last-child
+            transform rotate(45deg) translate(-3px,-3px);
