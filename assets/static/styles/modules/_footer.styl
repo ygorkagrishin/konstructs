@@ -4,40 +4,34 @@
     display: flex
     justify-content space-between
     padding 3.375rem 3.75rem 8.875rem 3.75rem
-    @media (orientation portrait) and (max-width 1024px)
+    @media (orientation portrait) and (max-width 1024px),
+    (orientation landscape) and (max-width 800px)
         padding: 1.7rem 1rem 7rem 1rem
-    @media (orientation landscape) and (max-width 800px)
-        padding: 1.7rem 1rem 7rem 1rem
-    @media (orientation landscape) and (max-width 680px)
-        flex-wrap wrap
-    @media (orientation portrait) and (max-width 580px)
+    @media (orientation landscape) and (max-width 680px),
+    (orientation portrait) and (max-width 580px)
         flex-wrap wrap
     @media (orientation portrait) and (max-width 420px)
         padding 1.7rem 0 7rem 0
-    @media (orientation landscape) and (max-width 480px)
-        flex-direction column
-    @media (orientation portrait) and (max-width 345px)
-        flex-direction: column
+    @media (orientation landscape) and (max-width 480px),
+    (orientation portrait) and (max-width 345px)
+        flex-wrap wrap
     & > .footer__col:last-child
-        @media (orientation landscape) and (max-width 680px)
-            flex 1 0 100%
-            padding-top: 1.5rem
-        @media (orientation portrait) and (max-width 580px)
-            flex 1 0 100%
+        @media (orientation landscape) and (max-width 680px),
+        (orientation portrait) and (max-width 580px)
+            max-width 100%
             padding-top 1.5rem
 .footer__col 
     footerColorText = #737c85
     
-    flex 1
+    width 100%
+    max-width (100%/3)
     @media (orientation landscape) and (max-width 680px)
-        flex 1 0 50%
+        max-width 50%
     @media (orientation portrait) and (max-width 580px)
-        flex 1 0 50%
-    @media (orientation landscape) and (max-width 480px)
-        flex 1 0 100%
-        text-align center
-    @media (orientation portrait) and (max-width 345px)
-        flex 1 0 100%
+        max-width 50%
+    @media (orientation landscape) and (max-width 480px),
+    (orientation portrait) and (max-width 345px)
+        max-width 100%
         text-align center    
     h6
         margin-bottom 1.5em
