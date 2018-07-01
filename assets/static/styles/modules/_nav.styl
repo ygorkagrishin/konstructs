@@ -3,11 +3,9 @@
         display flex
         padding 1.1875rem 1.875rem 
         background-color primaryLightGrey
-        /* 
-            Отключим элемент позже разберемся, что следать
-        */
-        @media (max-width 580px)
-            position absolute
+        @media (orientation portrait) and (max-width 580px), 
+        (orientation landscape) and (max-width 680px)
+            position fixed
             top 0
             left 0
             display flex
@@ -21,7 +19,8 @@
     li
         &:not(:last-child)
             margin-right 2.25rem
-            @media (max-width 580px)
+            @media (orientation portrait) and (max-width 580px),
+            (orientation landscape) and (max-width 680px)
                 margin-right 0
                 margin-bottom 1.5rem
     a
@@ -30,10 +29,17 @@
         color colorLink
         &:hover
             color primaryBlack
-    @media (max-width 580px)
+    @media (orientation portrait) and (max-width 580px),
+    (orientation landscape) and (max-width 680px)
         display none
         &.active
             display block
+    .btn__menu_type_close
+        display none
+        @media (orientation portrait) and (max-width 580px),
+        (orientation landscape) and (max-width 680px)
+            display inline-block
 .js-menu-active
-    @media (max-width 580px)
+    @media (orientation portrait) and (max-width 580px),
+    (orientation landscape) and (max-width 680px)
         overflow hidden

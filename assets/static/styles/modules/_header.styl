@@ -3,27 +3,21 @@
 .header__inner
     display flex
     padding 2.5rem 0 1.125rem 0
-    @media (orientation portrait) and (max-width 800px)
-        justify-content space-between
-    @media (orientation landscape) and (max-width 800px)
+    @media (max-width 800px)
         justify-content space-between
 .header__logo
-    @media (orientation portrait) and (max-width 800px)
-        flex 1
-    @media (orientation landscape) and (max-width 800px) 
+    @media (max-width 800px)
         flex 1
 .header__nav
     flex 2
-    @media (orientation portrait) and (max-width 800px)
-        flex 1
-    @media (orientation landscape) and (max-width 800px)
+    @media (max-width 800px)
         flex 1
     /* 
         Отключим элемент позже разберемся, что следать
     */
     @media (orientation portrait) and (max-width 580px)
         display none 
-    @media (orientation landscape) and (max-width 580px)
+    @media (orientation landscape) and (max-width 680px)
         display none
     ul
         padding-top .1rem
@@ -52,9 +46,7 @@
             font-size 2em
 .header__other
     padding-right .5rem
-    @media (orientation portrait) and (max-width 800px)
-        display none
-    @media (orientation landscape) and (max-width 800px)
+    @media (max-width 800px)
         display none
     ul
         padding-top .25rem
@@ -71,4 +63,6 @@
     display none
     padding .7rem
     @media (max-width 580px)
+        display block
+    @media (orientation landscape) and (max-width 680px)
         display block
